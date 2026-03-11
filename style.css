@@ -30,21 +30,58 @@ nav {
 }
 
 .logo{
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hamburger{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links{
+    display: flex;
+}
+
+@media(max-width: 1200px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 .nav-links a{
-  margin-left: 30px;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  opacity: 0.8;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    opacity: 0.8;
 }
 
 .nav-links a:hover{
-  opacity: 1;
-  color: grey;
+    opacity: 1;
+    color: grey;
 }
 
 /* --- LANDING PAGE (HERO) --- */
@@ -236,4 +273,14 @@ input, textarea {
 
 .contact-btn a:hover {
     background-color: #333;
+}
+
+.thank-you {
+    display: none;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 30px;
+    font-weight: 600;
+    transition: opacity 0.5s ease;
 }
