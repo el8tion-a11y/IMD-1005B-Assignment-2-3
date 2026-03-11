@@ -5,7 +5,7 @@ const thankyou = document.querySelector(".thank-you");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    thankyou.style.display = "block";
+    thankyou.style.display = "none";
     form.reset();
 
     // hide message after 4 seconds
@@ -23,4 +23,5 @@ if (hamburger) {
     hamburger.addEventListener("click", function() {
         navLinks.classList.toggle("active");
     });
+
 };
